@@ -16,30 +16,30 @@ class Item extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            color: Color(0xffFFF6DC),
+            color: const Color(0xffFFF6DC),
             child: Image.asset(number.image),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 16),
+            padding: const EdgeInsets.only(left: 16),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   number.jpName,
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: const TextStyle(color: Colors.white, fontSize: 20),
                 ),
                 Text(
                   number.enName,
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: const TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ],
             ),
           ),
-          Spacer(
-            flex: 1,
-          ),
+          const Spacer(),
           IconButton(
             onPressed: () {
+              AudioCache player = AudioCache(prefix: 'assets/sounds/colors/');
+              player.play('black.wav');
               // AudioCache player = AudioCache(prefix:'assets/sounds/numbers/');
               // player.
               // final player = AudioPlayer(playerId: 'assets/sounds/numbers/');
@@ -48,7 +48,7 @@ class Item extends StatelessWidget {
               //   prefix: 'assets/sounds/numbers/'
               // );
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.play_arrow,
               color: Colors.white,
               size: 30,
