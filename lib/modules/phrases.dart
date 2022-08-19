@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Items{
-  final String image;
+class Phrase{
   final String jpName;
   final String enName;
   final String sound;
-  const Items({required this.image,
+  const Phrase({
     required this.jpName,
     required this.enName,
     required this.sound});
